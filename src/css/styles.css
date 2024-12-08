@@ -177,7 +177,7 @@ button {
 }
 
 .load-more-images {
-  display: block;
+  display: none;
   margin: 25px auto;
   border-radius: 8px;
   border: 1px solid transparent;
