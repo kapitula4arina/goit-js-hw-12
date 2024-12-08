@@ -36,6 +36,9 @@ export default defineConfig(({ command }) => {
       outDir: '../dist',
       emptyOutDir: true,
     },
+    optimizeDeps: {
+      include: ['simplelightbox', 'izitoast', 'axios'],
+    },
     plugins: [
       FullReload(['./src/index.html']),
       SortCss({
