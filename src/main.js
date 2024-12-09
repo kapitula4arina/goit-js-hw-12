@@ -45,7 +45,13 @@ async function handleSearch(e) {
 
 async function loadMoreImages() {
     page += 1;
-    await fetchImages(formData.search, page, true);
+
+    try {
+        await fetchImages(formData.search, page, true);
+    } catch (error) {
+        console.error('Error loading more images:', error);
+        showMessage('error', 'Failed to load more images. Please try again later!');
+    }
 }
 
 async function fetchImages(search, currentPage, append = false) {

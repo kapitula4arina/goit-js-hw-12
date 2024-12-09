@@ -7,7 +7,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
 });
     
 export function renderGallery(data, tagToInsert) {
-    tagToInsert.innerHTML = createMarkup(data);
+    tagToInsert.insertAdjacentHTML('beforeend', createMarkup(data));
 
     lightbox.refresh();
 };
